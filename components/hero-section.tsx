@@ -3,24 +3,40 @@ import { Logo } from '@/components/logo'
 import Link from 'next/link'
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
-import { Menu, X } from 'lucide-react'
+import {
+    Bot,
+    Database,
+    Flame,
+    Menu,
+    PenTool,
+    Play,
+    Rocket,
+    Shield,
+    Sparkles,
+    Triangle,
+    X,
+    Zap,
+} from 'lucide-react'
 import Image from 'next/image'
-import { Spotify } from '@/components/ui/svgs/spotify'
-import { SupabaseFull } from '@/components/ui/svgs/supabase'
-import { Hulu } from '@/components/ui/svgs/hulu'
-import { FirebaseFull } from '@/components/ui/svgs/firebase'
-import { Beacon } from '@/components/ui/svgs/beacon'
-import { Bolt } from '@/components/ui/svgs/bolt'
-import { Claude } from '@/components/ui/svgs/claude'
-import { Figma } from '@/components/ui/svgs/figma'
-import { VercelFull } from '@/components/ui/svgs/vercel'
-import { Cisco } from '@/components/ui/svgs/cisco'
 
 const menuItems = [
     { name: 'Features', href: '#' },
     { name: 'Solution', href: '#' },
     { name: 'Pricing', href: '#' },
     { name: 'About', href: '#' },
+]
+
+const partnerLogos = [
+    { name: 'Bolt', icon: Zap },
+    { name: 'Vercel', icon: Triangle },
+    { name: 'Supabase', icon: Database },
+    { name: 'Hulu', icon: Play },
+    { name: 'Spotify', icon: Sparkles },
+    { name: 'Firebase', icon: Flame },
+    { name: 'Beacon', icon: Rocket },
+    { name: 'Claude', icon: Bot },
+    { name: 'Figma', icon: PenTool },
+    { name: 'Cisco', icon: Shield },
 ]
 
 export default function HeroSection() {
@@ -138,43 +154,17 @@ export default function HeroSection() {
                     <div className="m-auto max-w-5xl px-6">
                         <h2 className="text-center text-lg font-medium">Your favorite companies are our partners.</h2>
                         <div className="**:fill-foreground mx-auto mt-20 flex max-w-4xl flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-16 sm:gap-y-12">
-                            <Bolt
-                                height={22}
-                                width={56}
-                            />
-                            <VercelFull
-                                height={22}
-                                width={84}
-                            />
-                            <SupabaseFull className="h-6" />
-                            <Hulu
-                                height={18}
-                                width={56}
-                            />
-                            <Spotify
-                                height={24}
-                                width={80}
-                            />
-                            <FirebaseFull
-                                height={24}
-                                width={80}
-                            />
-                            <Beacon
-                                height={24}
-                                width={80}
-                            />
-                            <Claude
-                                height={26}
-                                width={90}
-                            />
-                            <Figma
-                                height={24}
-                                width={24}
-                            />
-                            <Cisco
-                                height={30}
-                                width={60}
-                            />
+                            {partnerLogos.map(({ name, icon: Icon }) => (
+                                <div
+                                    key={name}
+                                    className="text-foreground/80 flex items-center gap-2 text-sm font-medium">
+                                    <Icon
+                                        className="size-5"
+                                        strokeWidth={1.8}
+                                    />
+                                    <span>{name}</span>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
