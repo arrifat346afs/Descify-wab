@@ -112,7 +112,7 @@ export default function HeroSection() {
               <div className="rotate-x-20 skew-x-12 mask-r-from-75% mask-b-from-55% mask-b-to-100% pt-6 pl-6 lg:h-176">
                 <Image
                   className="rounded-(--radius) border shadow-xl dark:hidden"
-                  src="/card.png"
+                  src={appimg}
                   alt="Tailark hero section"
                   width={2880}
                   height={2074}
