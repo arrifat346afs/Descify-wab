@@ -5,7 +5,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
-import appimg from ""
+import appimg from "../public/screenshot_2025-12-26_16-58-54.png"
 
 const menuItems = [
   { name: "Features", href: "#" },
