@@ -101,7 +101,7 @@ export default function HeroSection() {
 
               <Button asChild size="lg">
                 <Link href="#">
-                  <span className="btn-label">Downloade Now</span>
+                  <span className="btn-label">Download Now</span>
                 </Link>
               </Button>
             </div>
