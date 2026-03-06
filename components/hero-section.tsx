@@ -101,7 +101,7 @@ export default function HeroSection() {
 
               <Button asChild size="lg">
                 <Link href="#">
-                  <span className="btn-label">Start Building</span>
+                  <span className="btn-label">Downloade Now</span>
                 </Link>
               </Button>
             </div>
@@ -119,7 +119,7 @@ export default function HeroSection() {
                 />
                 <Image
                   className="hidden rounded-(--radius) border shadow-xl dark:block"
-                  src="/dark-card.webp"
+                  src={appimg}
                   alt="Tailark hero section"
                   width={2880}
                   height={2074}
