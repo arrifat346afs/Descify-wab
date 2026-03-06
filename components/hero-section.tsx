@@ -150,24 +150,6 @@ export default function HeroSection() {
                         </div>
                     </div>
                 </section>
-                <section className="dark:bg-background bg-muted/50 relative z-10 py-16">
-                    <div className="m-auto max-w-5xl px-6">
-                        <h2 className="text-center text-lg font-medium">Your favorite companies are our partners.</h2>
-                        <div className="**:fill-foreground mx-auto mt-20 flex max-w-4xl flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-16 sm:gap-y-12">
-                            {partnerLogos.map(({ name, icon: Icon }) => (
-                                <div
-                                    key={name}
-                                    className="text-foreground/80 flex items-center gap-2 text-sm font-medium">
-                                    <Icon
-                                        className="size-5"
-                                        strokeWidth={1.8}
-                                    />
-                                    <span>{name}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
             </main>
         </>
     )
