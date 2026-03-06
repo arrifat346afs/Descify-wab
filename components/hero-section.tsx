@@ -3,20 +3,7 @@ import { Logo } from '@/components/logo'
 import Link from 'next/link'
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
-import {
-    Bot,
-    Database,
-    Flame,
-    Menu,
-    PenTool,
-    Play,
-    Rocket,
-    Shield,
-    Sparkles,
-    Triangle,
-    X,
-    Zap,
-} from 'lucide-react'
+
 import Image from 'next/image'
 
 const menuItems = [
@@ -26,18 +13,7 @@ const menuItems = [
     { name: 'About', href: '#' },
 ]
 
-const partnerLogos = [
-    { name: 'Bolt', icon: Zap },
-    { name: 'Vercel', icon: Triangle },
-    { name: 'Supabase', icon: Database },
-    { name: 'Hulu', icon: Play },
-    { name: 'Spotify', icon: Sparkles },
-    { name: 'Firebase', icon: Flame },
-    { name: 'Beacon', icon: Rocket },
-    { name: 'Claude', icon: Bot },
-    { name: 'Figma', icon: PenTool },
-    { name: 'Cisco', icon: Shield },
-]
+
 
 export default function HeroSection() {
     const [menuState, setMenuState] = useState(false)
