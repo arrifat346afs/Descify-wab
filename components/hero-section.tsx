@@ -134,10 +134,7 @@ export default function HeroSection() {
                 </Button>
               </div>
 
-              <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground">
-                Supports Gemini and OpenRouter, with desktop builds for Windows,
-                macOS, and Linux.
-              </p>
+
             </div>
           </div>
 
