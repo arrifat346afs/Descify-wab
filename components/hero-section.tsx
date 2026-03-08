@@ -8,10 +8,10 @@ import Image from "next/image"
 import appimg from "../public/screenshot_2025-12-26_16-58-54.png"
 
 const menuItems = [
-  { name: "Features", href: "#" },
-  { name: "Solution", href: "#" },
-  { name: "Donate", href: "#" },
-  { name: "About", href: "#" },
+  { name: "Features", href: "#features" },
+  { name: "Best for", href: "#best-for" },
+  { name: "GitHub", href: "https://github.com/arrifat346afs/Descify", external: true },
+  { name: "Download", href: "https://github.com/arrifat346afs/Descify/releases/latest", external: true },
 ]
 
 export default function HeroSection() {
@@ -51,6 +51,8 @@ export default function HeroSection() {
                       <li key={index}>
                         <Link
                           href={item.href}
+                          target={item.external ? "_blank" : undefined}
+                          rel={item.external ? "noreferrer" : undefined}
                           className="block text-muted-foreground duration-150 hover:text-accent-foreground"
                         >
                           <span>{item.name}</span>
@@ -62,13 +64,21 @@ export default function HeroSection() {
 
                 <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:border-l lg:pl-6">
                   <Button asChild variant="outline" size="sm">
-                    <Link href="#">
-                      <span>Login</span>
+                    <Link
+                      href="https://github.com/arrifat346afs/Descify"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span>View on GitHub</span>
                     </Link>
                   </Button>
                   <Button asChild size="sm">
-                    <Link href="#">
-                      <span>Login</span>
+                    <Link
+                      href="https://github.com/arrifat346afs/Descify/releases/latest"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span>Download</span>
                     </Link>
                   </Button>
                 </div>
@@ -91,19 +101,44 @@ export default function HeroSection() {
         <section className="overflow-hidden bg-muted/50 dark:bg-background">
           <div className="relative mx-auto max-w-5xl px-6 pt-28 lg:pt-24">
             <div className="relative z-10 mx-auto max-w-2xl text-center">
+              <span className="inline-block rounded-full border px-3 py-1 text-xs font-medium tracking-wide text-muted-foreground uppercase">
+                AI metadata workflow for images
+              </span>
               <h1 className="text-4xl font-semibold text-balance md:text-5xl lg:text-6xl">
-                Modern Software testing reimagined
+                Generate image titles, keywords, descriptions, and tags faster
               </h1>
               <p className="mx-auto my-8 max-w-2xl text-xl text-muted-foreground">
-                Officiis laudantium excepturi ducimus rerum dignissimos, and
-                tempora nam vitae, excepturi ducimus iste provident dolores.
+                Descify is a cross-platform desktop app built with Tauri, React,
+                and TypeScript. It helps you preview images, organize assets,
+                generate metadata with AI, and export or embed that metadata into
+                your files.
               </p>
 
-              <Button asChild size="lg">
-                <Link href="#">
-                  <span className="btn-label">Download Now</span>
-                </Link>
-              </Button>
+              <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <Button asChild size="lg">
+                  <Link
+                    href="https://github.com/arrifat346afs/Descify/releases/latest"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="btn-label">Download latest release</span>
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link
+                    href="https://github.com/arrifat346afs/Descify"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="btn-label">Browse the source</span>
+                  </Link>
+                </Button>
+              </div>
+
+              <p className="mt-4 text-sm text-muted-foreground">
+                Supports Gemini and OpenRouter, with desktop builds for Windows,
+                macOS, and Linux.
+              </p>
             </div>
           </div>
 
@@ -113,14 +148,14 @@ export default function HeroSection() {
                 <Image
                   className="rounded-(--radius) border shadow-xl dark:hidden"
                   src={appimg}
-                  alt="Tailark hero section"
+                  alt="Descify desktop app preview"
                   width={2880}
                   height={2074}
                 />
                 <Image
                   className="hidden rounded-(--radius) border shadow-xl dark:block"
                   src={appimg}
-                  alt="Tailark hero section"
+                  alt="Descify desktop app preview"
                   width={2880}
                   height={2074}
                 />

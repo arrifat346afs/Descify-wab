@@ -2,12 +2,11 @@ import Link from 'next/link'
 import { Logo } from '@/components/logo'
 
 const links = [
-    { label: 'Home', href: '#' },
-    { label: 'Features', href: '#' },
-    { label: 'Pricing', href: '#' },
-    { label: 'About', href: '#' },
-    { label: 'Blog', href: '#' },
-    { label: 'Contact', href: '#' },
+    { label: 'Home', href: '/' },
+    { label: 'Features', href: '#features' },
+    { label: 'Best for', href: '#best-for' },
+    { label: 'GitHub', href: 'https://github.com/arrifat346afs/Descify', external: true },
+    { label: 'Releases', href: 'https://github.com/arrifat346afs/Descify/releases/latest', external: true },
 ]
 
 export default function Footer() {
@@ -26,6 +25,8 @@ export default function Footer() {
                                 <Link
                                     key={link.label}
                                     href={link.href}
+                                    target={link.external ? '_blank' : undefined}
+                                    rel={link.external ? 'noreferrer' : undefined}
                                     className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                                     {link.label}
                                 </Link>
@@ -34,22 +35,28 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="@xl:flex-row @xl:justify-between flex flex-col-reverse gap-4 pt-8">
-                    <p className="text-muted-foreground text-sm">&copy; {2026} Veil.</p>
+                    <p className="text-muted-foreground text-sm">&copy; {2026} Descify. AI title, keyword & description generator for images.</p>
                     <div className="flex flex-wrap gap-4">
                         <Link
-                            href="#"
+                            href="https://github.com/arrifat346afs/Descify/blob/main/README.md"
+                            target="_blank"
+                            rel="noreferrer"
                             className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-                            Privacy Policy
+                            README
                         </Link>
                         <Link
-                            href="#"
+                            href="https://github.com/arrifat346afs/Descify/issues"
+                            target="_blank"
+                            rel="noreferrer"
                             className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-                            Terms of Service
+                            Issues
                         </Link>
                         <Link
-                            href="#"
+                            href="https://github.com/arrifat346afs/Descify/releases"
+                            target="_blank"
+                            rel="noreferrer"
                             className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-                            Cookies
+                            All releases
                         </Link>
                     </div>
                 </div>
