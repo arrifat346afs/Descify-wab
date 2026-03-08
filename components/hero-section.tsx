@@ -98,7 +98,7 @@ export default function HeroSection() {
           <div className="absolute top-0 left-0 h-320 w-60 -translate-y-87.5 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]" />
         </div>
 
-        <section className="overflow-hidden bg-muted/50 dark:bg-background">
+        <section className="overflow-hidden bg-muted/50 dark:bg-background bg-amber-400/50">
           <div className="relative mx-auto max-w-5xl px-6 pt-20 lg:pt-16">
             <div className="relative z-10 mx-auto max-w-xl text-center">
               <span className="inline-block rounded-full border px-3 py-1 text-xs font-medium tracking-wide text-muted-foreground uppercase">
