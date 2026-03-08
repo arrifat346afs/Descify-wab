@@ -105,7 +105,7 @@ export default function HeroSection() {
                 AI metadata workflow for images
               </span>
               <h1 className="mx-auto mt-4 max-w-5xl text-4xl font-semibold leading-tight text-balance md:text-5xl lg:text-5xl xl:text-6xl">
-                Generate image titles, keywords, descriptions, and tags faster
+                Generate image titles, descriptions, and keywords, faster
               </h1>
               <p className="mx-auto my-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
                 Descify is a cross-platform desktop app. It helps organize assets,
