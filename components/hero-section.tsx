@@ -49,8 +49,8 @@ export default function HeroSection() {
                       <li key={index}>
                         <Link
                           href={item.href}
-                          target={item.external ? "_blank" : undefined}
-                          rel={item.external ? "noreferrer" : undefined}
+                          target={item? "_blank" : undefined}
+                          rel={item? "noreferrer" : undefined}
                           className="block text-muted-foreground duration-150 hover:text-accent-foreground"
                         >
                           <span>{item.name}</span>
