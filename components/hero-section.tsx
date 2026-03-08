@@ -99,15 +99,15 @@ export default function HeroSection() {
         </div>
 
         <section className="overflow-hidden bg-muted/50 dark:bg-background">
-          <div className="relative mx-auto max-w-5xl px-6 pt-28 lg:pt-24">
-            <div className="relative z-10 mx-auto max-w-2xl text-center">
+          <div className="relative mx-auto max-w-5xl px-6 pt-20 lg:pt-16">
+            <div className="relative z-10 mx-auto max-w-xl text-center">
               <span className="inline-block rounded-full border px-3 py-1 text-xs font-medium tracking-wide text-muted-foreground uppercase">
                 AI metadata workflow for images
               </span>
-              <h1 className="text-4xl font-semibold text-balance md:text-5xl lg:text-6xl">
+              <h1 className="mt-4 text-4xl font-semibold text-balance md:text-5xl lg:text-5xl xl:text-6xl">
                 Generate image titles, keywords, descriptions, and tags faster
               </h1>
-              <p className="mx-auto my-8 max-w-2xl text-xl text-muted-foreground">
+              <p className="mx-auto my-6 max-w-xl text-lg text-muted-foreground md:text-xl">
                 Descify is a cross-platform desktop app built with Tauri, React,
                 and TypeScript. It helps you preview images, organize assets,
                 generate metadata with AI, and export or embed that metadata into
@@ -135,7 +135,7 @@ export default function HeroSection() {
                 </Button>
               </div>
 
-              <p className="mt-4 text-sm text-muted-foreground">
+              <p className="mt-3 text-sm text-muted-foreground">
                 Supports Gemini and OpenRouter, with desktop builds for Windows,
                 macOS, and Linux.
               </p>
@@ -144,7 +144,7 @@ export default function HeroSection() {
 
           <div className="mx-auto 2xl:max-w-7xl">
             <div className="pl-8 perspective-distant lg:pl-44">
-              <div className="rotate-x-20 skew-x-12 mask-r-from-75% mask-b-from-55% mask-b-to-100% pt-6 pl-6 lg:h-176">
+              <div className="-mt-2 rotate-x-20 skew-x-12 mask-r-from-75% mask-b-from-55% mask-b-to-100% pt-2 pl-6 lg:-mt-10 lg:h-160">
                 <Image
                   className="rounded-(--radius) border shadow-xl dark:hidden"
                   src={appimg}
