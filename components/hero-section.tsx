@@ -100,14 +100,14 @@ export default function HeroSection() {
 
         <section className="overflow-hidden bg-muted/50 dark:bg-background">
           <div className="relative mx-auto max-w-5xl px-6 pt-20 lg:pt-16">
-            <div className="relative z-10 mx-auto max-w-4xl text-center">
+            <div className="relative z-10 mx-auto max-w-5xl text-center">
               <span className="inline-block rounded-full border px-3 py-1 text-xs font-medium tracking-wide text-muted-foreground uppercase">
                 AI metadata workflow for images
               </span>
-              <h1 className="mx-auto mt-4 max-w-4xl text-4xl font-semibold leading-tight text-balance md:text-5xl lg:text-5xl xl:text-6xl">
+              <h1 className="mx-auto mt-4 max-w-5xl text-4xl font-semibold leading-tight text-balance md:text-5xl lg:text-5xl xl:text-6xl">
                 Generate image titles, keywords, descriptions, and tags faster
               </h1>
-              <p className="mx-auto my-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
+              <p className="mx-auto my-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
                 Descify is a cross-platform desktop app. It helps organize assets,
                 generate metadata with AI, and export or embed that metadata into
                 your files.
@@ -134,7 +134,7 @@ export default function HeroSection() {
                 </Button>
               </div>
 
-              <p className="mt-3 text-sm text-muted-foreground">
+              <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground">
                 Supports Gemini and OpenRouter, with desktop builds for Windows,
                 macOS, and Linux.
               </p>
