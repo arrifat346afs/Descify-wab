@@ -10,7 +10,6 @@ import appimg from "../public/screenshot_2025-12-26_16-58-54.png"
 const menuItems = [
   { name: "Features", href: "#features" },
   { name: "Best for", href: "#best-for" },
-  { name: "Download", href: "https://github.com/arrifat346afs/Descify/releases/latest", external: true },
 ]
 
 export default function HeroSection() {
