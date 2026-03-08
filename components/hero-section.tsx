@@ -104,7 +104,7 @@ export default function HeroSection() {
               <span className="inline-block rounded-full border px-3 py-1 text-xs font-medium tracking-wide text-muted-foreground uppercase">
                 AI metadata workflow for images
               </span>
-              <h1 className="mx-auto mt-4 max-w-5xl text-3xl font-semibold leading-tight text-balance md:text-5xl lg:text-5xl xl:text-6xl">
+              <h1 className="mx-auto mt-4 max-w-5xl text-3xl font-semibold leading-tight text-balance md:text-5xl lg:text-5xl xl:text-5xl">
                 Generate image titles, descriptions, and keywords, faster
               </h1>
               <p className="mx-auto my-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
