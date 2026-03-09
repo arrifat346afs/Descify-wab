@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { cn } from "@/lib/utils";
-import React, { useEffect, useRef, useState, ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { createNoise3D } from "simplex-noise";
 
 export const WavyBackground = ({
@@ -28,14 +28,9 @@ export const WavyBackground = ({
   [key: string]: any;
 }) => {
   const noise = createNoise3D();
-  let w: number,
-    h: number,
-    nt: number,
-    i: number,
-    x: number,
-    ctx: any,
-    canvas: any;
+  const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+
   const getSpeed = () => {
     switch (speed) {
       case "slow":
@@ -47,21 +42,6 @@ export const WavyBackground = ({
     }
   };
 
-  const init = () => {
-    canvas = canvasRef.current;
-    ctx = canvas.getContext("2d");
-    w = ctx.canvas.width = window.innerWidth;
-    h = ctx.canvas.height = window.innerHeight;
-    ctx.filter = `blur(${blur}px)`;
-    nt = 0;
-    window.onresize = function () {
-      w = ctx.canvas.width = window.innerWidth;
-      h = ctx.canvas.height = window.innerHeight;
-      ctx.filter = `blur(${blur}px)`;
-    };
-    render();
-  };
-
   const waveColors = colors ?? [
     "#38bdf8",
     "#818cf8",
@@ -69,7 +49,11 @@ export const WavyBackground = ({
     "#e879f9",
     "#22d3ee",
   ];
-  const drawWave = (n: number) => {
+
+  const drawWave = (ctx: CanvasRenderingContext2D, w: number, h: number, n: number, nt: number) => {
+    let i: number;
+    let x: number;
+
     nt += getSpeed();
     for (i = 0; i < n; i++) {
       ctx.beginPath();
@@ -83,20 +67,61 @@ export const WavyBackground = ({
       ctx.stroke();
       ctx.closePath();
     }
-  };
 
-  let animationId: number;
-  const render = () => {
-    ctx.fillStyle = backgroundFill || "black";
-    ctx.globalAlpha = waveOpacity || 0.5;
-    ctx.fillRect(0, 0, w, h);
-    drawWave(5);
-    animationId = requestAnimationFrame(render);
+    return nt;
   };
 
   useEffect(() => {
-    init();
+    const container = containerRef.current;
+    const canvas = canvasRef.current;
+
+    if (!container || !canvas) {
+      return;
+    }
+
+    const ctx = canvas.getContext("2d");
+
+    if (!ctx) {
+      return;
+    }
+
+    let animationId = 0;
+    let nt = 0;
+
+    const resizeCanvas = () => {
+      const { width, height } = container.getBoundingClientRect();
+      canvas.width = width;
+      canvas.height = height;
+      ctx.filter = `blur(${blur}px)`;
+    };
+
+    const render = () => {
+      const w = canvas.width;
+      const h = canvas.height;
+
+      ctx.clearRect(0, 0, w, h);
+
+      if (backgroundFill && backgroundFill !== "transparent") {
+        ctx.globalAlpha = 1;
+        ctx.fillStyle = backgroundFill;
+        ctx.fillRect(0, 0, w, h);
+      }
+
+      ctx.globalAlpha = waveOpacity || 0.5;
+      nt = drawWave(ctx, w, h, 5, nt);
+      animationId = requestAnimationFrame(render);
+    };
+
+    resizeCanvas();
+
+    const resizeObserver = new ResizeObserver(resizeCanvas);
+    resizeObserver.observe(container);
+    window.addEventListener("resize", resizeCanvas);
+    render();
+
     return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener("resize", resizeCanvas);
       cancelAnimationFrame(animationId);
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -114,22 +139,26 @@ export const WavyBackground = ({
 
   return (
     <div
+      ref={containerRef}
       className={cn(
-        "h-screen flex flex-col items-center justify-center",
+        "relative isolate w-full overflow-hidden",
         containerClassName
       )}
     >
       <canvas
-        className="absolute inset-0 z-0"
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-0 h-full w-full"
         ref={canvasRef}
         id="canvas"
         style={{
           ...(isSafari ? { filter: `blur(${blur}px)` } : {}),
         }}
       ></canvas>
-      <div className={cn("relative z-10", className)} {...props}>
-        {children}
-      </div>
+      {children ? (
+        <div className={cn("relative z-10", className)} {...props}>
+          {children}
+        </div>
+      ) : null}
     </div>
   );
 };
