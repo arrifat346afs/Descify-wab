@@ -34,9 +34,9 @@ export default function FeaturesSectionDemo() {
       icon: <IconCurrencyDollar />,
     },
     {
-      title: "Bundled ExifTool",
+      title: "Embed metadata with ExifTool",
       description:
-        "No need to install ExifTool separately - it's bundled with the app for seamless metadata embedding.",
+        "Embed generated metadata directly into your image files using ExifTool.",
       icon: <IconCloud />,
     },
     {
