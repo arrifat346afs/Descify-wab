@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import appimg from "../public/screenshot_2025-12-26_16-58-54.png"
+import { WavyBackground } from "./ui/wavy-background"
 
 const menuItems = [
   { name: "Features", href: "#features" },
@@ -87,6 +88,7 @@ export default function HeroSection() {
       </header>
 
       <main>
+         <WavyBackground className="max-w-4xl mx-auto pb-40">
         <div
           aria-hidden
           className="absolute inset-0 isolate z-2 hidden opacity-50 contain-strict lg:block"
@@ -154,9 +156,9 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-        </section>
+        </section></WavyBackground>
       </main>
-      
+
     </>
   )
 }
