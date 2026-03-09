@@ -11,7 +11,7 @@ export default function Page() {
     <div>
       <HeroSection />
       {/* <Features /> */}
-      <div>
+      <div className="pt-14">
         <FeaturesSectionDemo />
       </div>
       <FAQsThree />
