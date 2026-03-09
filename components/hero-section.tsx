@@ -98,7 +98,7 @@ export default function HeroSection() {
         </div>
 
         <section className="overflow-hidden bg-muted/50 dark:bg-background">
-         <WavyBackground className="max-w-4xl mx-auto pb-40">
+         <WavyBackground className="z">
           <div className="relative mx-auto max-w-5xl px-6 pt-10 lg:pt-16">
             <div className="relative z-10 mx-auto max-w-5xl text-center">
               <span className="inline-block rounded-full border px-3 py-1 text-xs font-medium tracking-wide text-muted-foreground uppercase">
