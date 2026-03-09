@@ -88,7 +88,6 @@ export default function HeroSection() {
       </header>
 
       <main>
-         <WavyBackground className="max-w-4xl mx-auto pb-40">
         <div
           aria-hidden
           className="absolute inset-0 isolate z-2 hidden opacity-50 contain-strict lg:block"
@@ -98,6 +97,7 @@ export default function HeroSection() {
           <div className="absolute top-0 left-0 h-320 w-60 -translate-y-87.5 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]" />
         </div>
 
+         <WavyBackground className="max-w-4xl mx-auto pb-40">
         <section className="overflow-hidden bg-muted/50 dark:bg-background">
           <div className="relative mx-auto max-w-5xl px-6 pt-10 lg:pt-16">
             <div className="relative z-10 mx-auto max-w-5xl text-center">
