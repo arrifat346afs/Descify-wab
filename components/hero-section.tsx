@@ -99,7 +99,7 @@ export default function HeroSection() {
 
         <section className="overflow-hidden bg-muted/50 dark:bg-background">
          <WavyBackground className="z-10">
-          <div className="relative mx-auto max-w-5xl px-6 pt-10 lg:pt-16">
+          <div className="relative mx-auto max-w-5xl px-6  lg:pt-16">
             <div className="relative z-10 mx-auto max-w-5xl text-center">
               <span className="inline-block rounded-full border px-3 py-1 text-xs font-medium tracking-wide text-muted-foreground uppercase">
                 AI metadata workflow for images
