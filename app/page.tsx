@@ -1,18 +1,21 @@
 // import { Button } from "@/components/ui/button"
 
-import FAQsThree from "@/components/faqs-3";
+import FAQsThree from "@/components/faqs-3"
 // import Features from "@/components/features-4";
-import Footer from "@/components/footer-3";
-import HeroSection from "@/components/hero-section";
+import FeaturesSectionDemo from "@/components/features-section-demo-2"
+import Footer from "@/components/footer-3"
+import HeroSection from "@/components/hero-section"
 
 export default function Page() {
   return (
     <div>
-       <HeroSection />
-       {/* <Features /> */}
-       <FeaturesSectionDemo />
-       <FAQsThree />
-       <Footer />
+      <HeroSection />
+      {/* <Features /> */}
+      <div>
+        <FeaturesSectionDemo />
+      </div>
+      <FAQsThree />
+      <Footer />
     </div>
   )
 }
