@@ -97,16 +97,15 @@ export default function HeroSection() {
           <div className="absolute top-0 left-0 h-320 w-60 -translate-y-87.5 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]" />
         </div>
 
-        <section className="relative overflow-hidden bg-muted/50 dark:bg-background">
+        <section className="overflow-hidden bg-muted/50 dark:bg-background">
+
           <WavyBackground
-            containerClassName="absolute inset-0"
             backgroundFill="transparent"
             blur={12}
             waveOpacity={0.2}
-          />
-
-          <div className="relative z-10 mx-auto max-w-5xl px-6 pt-24 pb-12 lg:pt-16">
-            <div className="relative z-10 mx-auto max-w-5xl text-center">
+            className="mx-auto max-w-5xl px-6 pt-24 pb-12 lg:pt-16"
+          >
+            <div className="mx-auto max-w-5xl text-center">
               <span className="inline-block rounded-full border px-3 py-1 text-xs font-medium tracking-wide text-muted-foreground uppercase">
                 AI metadata workflow for images
               </span>
@@ -137,10 +136,8 @@ export default function HeroSection() {
                   </Link>
                 </Button>
               </div>
-
-
             </div>
-          </div>
+          </WavyBackground>
 
           <div className="mx-auto 2xl:max-w-7xl">
             <div className="pl-8 perspective-distant lg:pl-44">
