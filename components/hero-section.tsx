@@ -14,6 +14,7 @@ const menuItems = [
   { name: "Home", href: "/" },
   { name: "Features", href: "#features", isAnchor: true },
   { name: "Download", href: "#download", isAnchor: true },
+  { name: "Demo", href: "#demo", isAnchor: true },
 ]
 
 export default function HeroSection() {
