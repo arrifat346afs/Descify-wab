@@ -14,34 +14,11 @@ const LinuxIcon = () => (
    width="200"
    height="200"
    viewBox="0 0 200 200"
-   version="1.1"
    id="svg17"
-   sodipodi:docname="a_professional_flat_vector_illustration_of_tux_the_019cd8c7-1ac1-74f0-bac3-387f51d17eed.svg"
-   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
+   xmlns="http://www.w3.org/2000/svg">
   <defs
      id="defs17" />
-  <sodipodi:namedview
-     id="namedview17"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="3.045"
-     inkscape:cx="100"
-     inkscape:cy="99.671593"
-     inkscape:window-width="1528"
-     inkscape:window-height="820"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg17" />
+
   <!-- SVG created with Arrow, by QuiverAI (https://quiver.ai) -->
   <path
      d="m178.9 161.8c-2.87-2.53-3.62-4.48-3.75-7.93-0.25-4.82-2.72-8.54-6.63-9.38-0.57-0.14-0.76-0.65-0.5-1.72 3.43-11.34 1.29-25.32-8.45-41.82-8.44-14.43-22.65-24.28-22.65-45.38 0-17.6 1.64-46.6-32.37-52.75h-2.32c-35.31 0-32.23 34.43-32.04 41.07 0.33 12.5 0.94 22.16-8.81 37.03-11.22 14.05-19.33 26.3-23.55 41.13-2.32 8.09-1.71 15.92-0.91 18.82-1.64 1.31-3.07 3.75-4.59 5.83-2.08 2.6-8.23 2.92-11.23 5.14-2.94 2.33-4.95 5.61-3.77 11.33 0.57 3.2 1.15 4.51-1.04 9.87-1.31 3.21-1.13 6.01 0.76 8.27 2.6 3.31 7.68 4.68 14.87 5.74 9.1 1.37 14.33 3.76 20.98 6.3 6.09 2.47 14.59 4.04 20.86 1.01 2.99-1.25 4.19-3.29 4.66-4.67 5.54-0.2 13.65-2.98 23.03-2.98 6.71 0 14.21 1.88 24.02 2.39 1.37 3.87 5.98 7.74 13.36 7.74 8.24 0 12.37-4.82 19.87-9.79 6.58-4.48 12.05-6.18 18.08-10.05 5.97-3.58 9.18-9.03 2.12-15.2z"
