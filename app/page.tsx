@@ -13,7 +13,9 @@ export default function Page() {
       <div id="features" className="pt-20">
         <Features />
       </div>
-      <FAQsThree />
+      <div id="faqs">
+        <FAQsThree />
+      </div>
       <Footer />
     </div>
   )

@@ -14,7 +14,7 @@ const menuItems = [
   { name: "Home", href: "/" },
   { name: "Features", href: "#features", isAnchor: true },
   { name: "Demo", href: "#demo", isAnchor: true },
-  { name: "FAQs", href: "#FAQsThree", isAnchor: true },
+  { name: "FAQs", href: "#faqs", isAnchor: true },
   { name: "Download", href: "#download", isAnchor: true },
 ]
 
@@ -65,7 +65,7 @@ export default function HeroSection() {
                                 .getElementById(item.href.slice(1))
                                 ?.scrollIntoView({ behavior: "smooth" })
                             }}
-                            className="block text-muted-foreground duration-150 hover:text-accent-foreground hover:cursor-pointer"
+                            className="block text-muted-foreground duration-150 hover:cursor-pointer hover:text-accent-foreground"
                           >
                             <span>{item.name}</span>
                           </button>
