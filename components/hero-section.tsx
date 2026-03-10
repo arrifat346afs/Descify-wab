@@ -11,8 +11,8 @@ import { WavyBackground } from "./ui/wavy-background"
 import applogo from "../public/descify.svg"
 
 const menuItems = [
+  { name: "home", href: "/" },
   { name: "Features", href: "#features" },
-  { name: "Best for", href: "#best-for" },
 ]
 
 export default function HeroSection() {
