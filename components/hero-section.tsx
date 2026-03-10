@@ -99,7 +99,7 @@ export default function HeroSection() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <span>View on <Github /></span>
+                       <Github />
                     </Link>
                   </Button>
                   <Button asChild size="sm">
