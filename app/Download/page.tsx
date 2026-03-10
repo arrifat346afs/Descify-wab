@@ -6,13 +6,13 @@ import { Menu, X, Download, ArrowDown, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import applogo from "../../public/descify.svg"
+import LinuxLogo from "../../public/linux.svg"
 import Footer from "@/components/footer-3"
 
 // ---------- OS icons ----------
 const LinuxIcon = () => (
-  <svg viewBox="0 0 64 64" className="h-16 w-16" fill="currentColor" aria-hidden="true">
-    <path d="M32 2C18.7 2 8 12.7 8 26c0 7.2 3.1 13.7 8 18.2V54c0 2.2 1.8 4 4 4h24c2.2 0 4-1.8 4-4v-9.8C53 39.7 56 33.2 56 26 56 12.7 45.3 2 32 2zm-6 36c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm12 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6-10H20v-4h24v4z" />
-  </svg>
+    <Image src={LinuxLogo} alt="Linux" width={64} height={64} />
+
 )
 
 const AppleIcon = () => (
