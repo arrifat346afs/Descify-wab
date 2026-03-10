@@ -4,7 +4,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { Github, Menu, X } from "lucide-react"
 import Image from "next/image"
 import appimg from "../public/screenshot_2025-12-26_16-58-54.png"
 import { WavyBackground } from "./ui/wavy-background"
@@ -99,7 +99,7 @@ export default function HeroSection() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <span>View on GitHub</span>
+                      <span>View on <Github /></span>
                     </Link>
                   </Button>
                   <Button asChild size="sm">
