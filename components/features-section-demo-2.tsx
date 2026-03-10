@@ -55,9 +55,9 @@ export default function FeaturesSectionDemo() {
       icon: <IconTags />,
     },
     {
-      title: "Image file preview",
+      title: "Image & video file preview",
       description:
-        "Preview your images directly in the app while viewing and editing metadata.",
+        "Preview your images and videos directly in the app while viewing and editing metadata. Supports PNG, JPEG, SVG, and video files.",
       icon: <IconPhoto />,
     },
     {
