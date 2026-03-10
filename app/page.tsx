@@ -10,8 +10,8 @@ export default function Page() {
   return (
     <div>
       <HeroSection />
-      <div className="pt-20">
-        <Features  />
+      <div id="features" className="pt-20">
+        <Features />
       </div>
       <FAQsThree />
       <Footer />

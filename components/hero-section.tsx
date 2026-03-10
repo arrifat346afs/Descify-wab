@@ -33,7 +33,12 @@ export default function HeroSection() {
                   aria-label="home"
                   className="flex items-center space-x-2"
                 >
-                  <Image src={applogo} alt="Descify Logo" width={24} height={24}/>
+                  <Image
+                    src={applogo}
+                    alt="Descify Logo"
+                    width={24}
+                    height={24}
+                  />
                 </Link>
 
                 <button
@@ -53,8 +58,14 @@ export default function HeroSection() {
                       <li key={index}>
                         <Link
                           href={item.href}
-                          target={item? "_blank" : undefined}
-                          rel={item? "noreferrer" : undefined}
+                          target={
+                            item.href.startsWith("http") ? "_blank" : undefined
+                          }
+                          rel={
+                            item.href.startsWith("http")
+                              ? "noreferrer"
+                              : undefined
+                          }
                           className="block text-muted-foreground duration-150 hover:text-accent-foreground"
                         >
                           <span>{item.name}</span>
@@ -101,7 +112,6 @@ export default function HeroSection() {
         </div>
 
         <section className="overflow-hidden bg-muted/50 dark:bg-background">
-
           <WavyBackground
             backgroundFill="transparent"
             blur={12}
@@ -112,7 +122,7 @@ export default function HeroSection() {
               <span className="inline-block rounded-full border px-3 py-1 text-xs font-medium tracking-wide text-muted-foreground uppercase">
                 AI metadata workflow for images
               </span>
-              <h1 className="mx-auto mt-4 max-w-5xl text-3xl font-semibold leading-tight text-balance md:text-5xl lg:text-5xl xl:text-5xl">
+              <h1 className="mx-auto mt-4 max-w-5xl text-3xl leading-tight font-semibold text-balance md:text-5xl lg:text-5xl xl:text-5xl">
                 Generate image titles, descriptions, and keywords, faster
               </h1>
               <p className="mx-auto my-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
@@ -164,7 +174,6 @@ export default function HeroSection() {
           </div>
         </section>
       </main>
-
     </>
   )
 }
