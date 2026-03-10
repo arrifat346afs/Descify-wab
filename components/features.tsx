@@ -16,7 +16,7 @@ import {
   IconClockHour4,
 } from "@tabler/icons-react"
 
-export default function FeaturesSectionDemo() {
+export default function Features() {
   const features = [
     {
       title: "Batch metadata generation",
