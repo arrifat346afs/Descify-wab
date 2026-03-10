@@ -13,7 +13,7 @@ import applogo from "../public/descify.svg"
 const menuItems = [
   { name: "home", href: "/" },
   { name: "Features", href: "#features" },
-  { name}
+  { name: "Download", href: "https://github.com/arrifat346afs/Descify/releases/latest" },
 ]
 
 export default function HeroSection() {
