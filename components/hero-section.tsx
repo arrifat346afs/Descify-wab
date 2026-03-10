@@ -13,6 +13,7 @@ import applogo from "../public/descify.svg"
 const menuItems = [
   { name: "home", href: "/" },
   { name: "Features", href: "#features" },
+  { name}
 ]
 
 export default function HeroSection() {
