@@ -1,6 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
+// /* eslint-disable @next/next/no-img-element */
 "use client"
-import { Logo } from "@/components/logo"
+// import { Logo } from "@/components/logo"
 import Link from "next/link"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
