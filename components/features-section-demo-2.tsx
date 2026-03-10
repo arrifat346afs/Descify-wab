@@ -11,6 +11,9 @@ import {
   IconTags,
   IconPhoto,
   IconCategory,
+  IconLayersLinked,
+  IconListNumbers,
+  IconClockHour4,
 } from "@tabler/icons-react"
 
 export default function FeaturesSectionDemo() {
@@ -68,6 +71,24 @@ export default function FeaturesSectionDemo() {
       description:
         "Use Descify on Windows, macOS, and Linux with a fast desktop experience built with Tauri.",
       icon: <IconAdjustmentsBolt />,
+    },
+    {
+      title: "Parallel Processing",
+      description:
+        "Process multiple images simultaneously with configurable workers (1-5) for faster results with paid APIs.",
+      icon: <IconLayersLinked />,
+    },
+    {
+      title: "Sequential Processing",
+      description:
+        "Process images one at a time to avoid rate limiting when using free or trial AI APIs.",
+      icon: <IconListNumbers />,
+    },
+    {
+      title: "Request Delay",
+      description:
+        "Configure delay between AI requests (0-10 seconds) to prevent rate limiting and optimize API usage.",
+      icon: <IconClockHour4 />,
     },
   ]
   return (
