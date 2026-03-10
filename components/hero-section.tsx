@@ -63,7 +63,7 @@ export default function HeroSection() {
                                 .getElementById(item.href.slice(1))
                                 ?.scrollIntoView({ behavior: "smooth" })
                             }}
-                            className="block text-muted-foreground duration-150 hover:text-accent-foreground"
+                            className="block text-muted-foreground duration-150 hover:text-accent-foreground hover:cursor-pointer"
                           >
                             <span>{item.name}</span>
                           </button>
