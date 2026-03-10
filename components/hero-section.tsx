@@ -162,15 +162,15 @@ export default function HeroSection() {
                     <span className="btn-label">Download latest release</span>
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg">
                   <Link
                     href="https://github.com/arrifat346afs/Descify"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <span className="btn-label">Browse the source</span>
-                  </Link>
+                <Button asChild variant="outline" className="flex items-center justify-center">
+                    <span className="btn-label">Browse the source <GitHubIcon /></span>
                 </Button>
+                  </Link>
               </div>
             </div>
           </WavyBackground>
