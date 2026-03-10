@@ -1,6 +1,9 @@
-import React from 'react'
-
-
+import  { useState } from 'react'
+import { Button } from "@/components/ui/button"
+import { Github,  Menu, X } from "lucide-react"
+import Link from 'next/link'
+import Image from 'next/image'
+import applogo from "../public/descify.svg"
 const menuItems = [
   { name: "Home", href: "/" },
   { name: "Features", href: "#features", isAnchor: true },
@@ -11,6 +14,7 @@ const menuItems = [
 
 
 export const HeaderSection = () => {
+    const [menuState, setMenuState] = useState(false)
   return (
     <>     <header>
         <nav
@@ -89,7 +93,7 @@ export const HeaderSection = () => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <GitHubIcon />
+                      <Github />
                     </Link>
                   </Button>
                   <Button asChild size="sm">
