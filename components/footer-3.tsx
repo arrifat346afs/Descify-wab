@@ -34,31 +34,9 @@ export default function Footer() {
                         </nav>
                     </div>
                 </div>
-                <div className="@xl:flex-row @xl:justify-between flex flex-col-reverse gap-4 pt-8">
+                <div className=" flex justify-center gap-4 pt-8">
                     <p className="text-muted-foreground text-sm">&copy; {2026} Descify. AI title, keyword & description generator for images.</p>
-                    <div className="flex flex-wrap gap-4">
-                        <Link
-                            href="https://github.com/arrifat346afs/Descify/blob/main/README.md"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-                            README
-                        </Link>
-                        <Link
-                            href="https://github.com/arrifat346afs/Descify/issues"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-                            Issues
-                        </Link>
-                        <Link
-                            href="https://github.com/arrifat346afs/Descify/releases"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-                            All releases
-                        </Link>
-                    </div>
+                    {/*  */}
                 </div>
             </div>
         </footer>
