@@ -31,7 +31,7 @@ export default function HeroSection() {
                   aria-label="home"
                   className="flex items-center space-x-2"
                 >
-                  <Logo />
+                  <img src={applogo} alt="Descify Logo" />
                 </Link>
 
                 <button
