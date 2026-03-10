@@ -34,7 +34,7 @@ export default function Footer() {
                         </nav>
                     </div>
                 </div>
-                <div className=" flex justify-center gap-4 pt-8">
+                <div className="penguin flex justify-center gap-4 pt-8">
                     <p className="text-muted-foreground text-sm">&copy; {2026} Descify. AI title, keyword & description generator for images.</p>
                     {/*  */}
                 </div>
