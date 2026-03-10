@@ -57,7 +57,7 @@ export default function HeroSection() {
                     {menuItems.map((item, index) => (
                       <li key={index}>
                         {item.isAnchor ? (
-                          <Button
+                          <button
                             onClick={() => {
                               document
                                 .getElementById(item.href.slice(1))
@@ -66,7 +66,7 @@ export default function HeroSection() {
                             className="block text-muted-foreground duration-150 hover:text-accent-foreground"
                           >
                             <span>{item.name}</span>
-                          </Button>
+                          </button>
                         ) : (
                           <Link
                             href={item.href}
