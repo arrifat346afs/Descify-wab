@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import appimg from "../public/screenshot_2025-12-26_16-58-54.png"
 import { WavyBackground } from "./ui/wavy-background"
+import applogo from "../public/descify.svg"
 
 const menuItems = [
   { name: "Features", href: "#features" },
