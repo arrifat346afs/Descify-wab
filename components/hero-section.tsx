@@ -2,40 +2,119 @@
 "use client"
 // import { Logo } from "@/components/logo"
 import Link from "next/link"
-// import { useState } from "react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
-// import { Menu, X } from "lucide-react"
-
-const GitHubIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    viewBox="0 0 24 24"
-    width="16"
-    height="16"
-    fill="currentColor"
-    aria-hidden="true"
-    {...props}
-  >
-    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" />
-  </svg>
-)
+import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import appimg from "../public/screenshot_2025-12-26_16-58-54.png"
 import { WavyBackground } from "./ui/wavy-background"
-// import applogo from "../public/descify.svg"
+import applogo from "../public/descify.svg"
 
-// const menuItems = [
-//   { name: "Home", href: "/" },
-//   { name: "Features", href: "#features", isAnchor: true },
-//   { name: "Demo", href: "#demo", isAnchor: true },
-//   { name: "FAQs", href: "#faqs", isAnchor: true },
-//   { name: "Download", href: "#download", isAnchor: true },
-// ]
+const menuItems = [
+  { name: "Home", href: "/" },
+  { name: "Features", href: "#features", isAnchor: true },
+  { name: "Download", href: "#download", isAnchor: true },
+]
 
 export default function HeroSection() {
-  // const [menuState, setMenuState] = useState(false)
+  const [menuState, setMenuState] = useState(false)
   return (
     <>
-      <HeroSection />
+      <header>
+        <nav
+          data-state={menuState && "active"}
+          className="fixed z-20 w-full border-b border-dashed bg-white backdrop-blur md:relative dark:bg-zinc-950/50 lg:dark:bg-transparent"
+        >
+          <div className="m-auto max-w-5xl px-6">
+            <div className="flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
+              <div className="flex w-full justify-between lg:w-auto">
+                <Link
+                  href="/"
+                  aria-label="home"
+                  className="flex items-center space-x-2"
+                >
+                  <Image
+                    src={applogo}
+                    alt="Descify Logo"
+                    width={24}
+                    height={24}
+                  />
+                </Link>
+
+                <button
+                  onClick={() => setMenuState(!menuState)}
+                  aria-label={menuState == true ? "Close Menu" : "Open Menu"}
+                  className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
+                >
+                  <Menu className="m-auto size-6 duration-200 in-data-[state=active]:scale-0 in-data-[state=active]:rotate-180 in-data-[state=active]:opacity-0" />
+                  <X className="absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100" />
+                </button>
+              </div>
+
+              <div className="mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 in-data-[state=active]:block md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none lg:in-data-[state=active]:flex dark:shadow-none dark:lg:bg-transparent">
+                <div className="lg:pr-4">
+                  <ul className="space-y-6 text-base lg:flex lg:gap-8 lg:space-y-0 lg:text-sm">
+                    {menuItems.map((item, index) => (
+                      <li key={index}>
+                        {item.isAnchor ? (
+                          <button
+                            onClick={() => {
+                              document
+                                .getElementById(item.href.slice(1))
+                                ?.scrollIntoView({ behavior: "smooth" })
+                            }}
+                            className="block text-muted-foreground duration-150 hover:text-accent-foreground hover:co"
+                          >
+                            <span>{item.name}</span>
+                          </button>
+                        ) : (
+                          <Link
+                            href={item.href}
+                            target={
+                              item.href.startsWith("http")
+                                ? "_blank"
+                                : undefined
+                            }
+                            rel={
+                              item.href.startsWith("http")
+                                ? "noreferrer"
+                                : undefined
+                            }
+                            className="block text-muted-foreground duration-150 hover:text-accent-foreground"
+                          >
+                            <span>{item.name}</span>
+                          </Link>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:border-l lg:pl-6">
+                  <Button asChild variant="outline" size="sm">
+                    <Link
+                      href="https://github.com/arrifat346afs/Descify"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span>View on GitHub</span>
+                    </Link>
+                  </Button>
+                  <Button asChild size="sm">
+                    <Link
+                      href="https://github.com/arrifat346afs/Descify/releases/latest"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span>Download</span>
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
 
       <main>
         <div
@@ -75,20 +154,13 @@ export default function HeroSection() {
                     <span className="btn-label">Download latest release</span>
                   </Link>
                 </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  className="flex items-center gap-2"
-                  size="lg"
-                >
+                <Button asChild variant="outline" size="lg">
                   <Link
                     href="https://github.com/arrifat346afs/Descify"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <span className="btn-label flex items-center gap-2">
-                      Browse the source <GitHubIcon />
-                    </span>
+                    <span className="btn-label">Browse the source</span>
                   </Link>
                 </Button>
               </div>
