@@ -56,20 +56,35 @@ export default function HeroSection() {
                   <ul className="space-y-6 text-base lg:flex lg:gap-8 lg:space-y-0 lg:text-sm">
                     {menuItems.map((item, index) => (
                       <li key={index}>
-                        <Link
-                          href={item.href}
-                          target={
-                            item.href.startsWith("http") ? "_blank" : undefined
-                          }
-                          rel={
-                            item.href.startsWith("http")
-                              ? "noreferrer"
-                              : undefined
-                          }
-                          className="block text-muted-foreground duration-150 hover:text-accent-foreground"
-                        >
-                          <span>{item.name}</span>
-                        </Link>
+                        {item.isAnchor ? (
+                          <button
+                            onClick={() => {
+                              document
+                                .getElementById(item.href.slice(1))
+                                ?.scrollIntoView({ behavior: "smooth" })
+                            }}
+                            className="block text-muted-foreground duration-150 hover:text-accent-foreground"
+                          >
+                            <span>{item.name}</span>
+                          </button>
+                        ) : (
+                          <Link
+                            href={item.href}
+                            target={
+                              item.href.startsWith("http")
+                                ? "_blank"
+                                : undefined
+                            }
+                            rel={
+                              item.href.startsWith("http")
+                                ? "noreferrer"
+                                : undefined
+                            }
+                            className="block text-muted-foreground duration-150 hover:text-accent-foreground"
+                          >
+                            <span>{item.name}</span>
+                          </Link>
+                        )}
                       </li>
                     ))}
                   </ul>
