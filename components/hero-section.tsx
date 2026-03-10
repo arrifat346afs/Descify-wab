@@ -11,9 +11,9 @@ import { WavyBackground } from "./ui/wavy-background"
 import applogo from "../public/descify.svg"
 
 const menuItems = [
-  { name: "home", href: "/" },
+  { name: "Home", href: "/" },
   { name: "Features", href: "#features" },
-  { name: "Download", href: "https://github.com/arrifat346afs/Descify/releases/latest" },
+  { name: "Download", href: "#download" },
 ]
 
 export default function HeroSection() {
