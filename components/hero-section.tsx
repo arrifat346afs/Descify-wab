@@ -32,7 +32,7 @@ export default function HeroSection() {
                   aria-label="home"
                   className="flex items-center space-x-2"
                 >
-                  <Img src={applogo} alt="Descify Logo" />
+                  <Image src={applogo} alt="Descify Logo" width={24} height={24}/>
                 </Link>
 
                 <button
