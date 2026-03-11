@@ -54,11 +54,11 @@ export default function HeroSection() {
               <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Button asChild size="lg">
                   <Link
-                    href="https://github.com/arrifat346afs/Descify/releases/latest"
+                    href="/Download"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <span className="btn-label">Download latest release</span>
+                    <span className="btn-label">Download Now</span>
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
