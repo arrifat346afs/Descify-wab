@@ -63,6 +63,7 @@ export default function HeroSection() {
                     href="https://github.com/arrifat346afs/Descify"
                     target="_blank"
                     rel="noreferrer"
+                    className="flex items-center gap-2"
                   >
                     <Github className="size-4" />
                     <span className="btn-label">Browse the source</span>
