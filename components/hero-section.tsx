@@ -2,23 +2,23 @@
 "use client"
 // import { Logo } from "@/components/logo"
 import Link from "next/link"
-import { useState } from "react"
+// import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+// import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import appimg from "../public/screenshot_2025-12-26_16-58-54.png"
 import { WavyBackground } from "./ui/wavy-background"
-import applogo from "../public/descify.svg"
+// import applogo from "../public/descify.svg"
 import { HeaderSection } from "./HeaderSection"
 
-const menuItems = [
-  { name: "Home", href: "/" },
-  { name: "Features", href: "#features", isAnchor: true },
-  { name: "Download", href: "#download", isAnchor: true },
-]
+// const menuItems = [
+//   { name: "Home", href: "/" },
+//   { name: "Features", href: "#features", isAnchor: true },
+//   { name: "Download", href: "#download", isAnchor: true },
+// ]
 
 export default function HeroSection() {
-  const [menuState, setMenuState] = useState(false)
+  // const [menuState, setMenuState] = useState(false)
   return (
     <>
     <HeaderSection />
