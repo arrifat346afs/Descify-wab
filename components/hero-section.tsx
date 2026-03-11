@@ -58,7 +58,7 @@ export default function HeroSection() {
                     <span className="btn-label">Download Now</span>
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="gap-2">
+                <Button variant="outline" size="lg" className="gap-2 flex">
                   <Link
                     href="https://github.com/arrifat346afs/Descify"
                     target="_blank"
