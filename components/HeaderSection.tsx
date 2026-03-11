@@ -94,7 +94,7 @@ export const HeaderSection = () => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <Github />
+                      <Github className="size-5"/>
                     </Link>
                   </Button>
                   <Button asChild size="sm">
