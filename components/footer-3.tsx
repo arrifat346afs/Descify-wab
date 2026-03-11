@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import { Logo } from '@/components/logo'
-
+// import { Logo } from '@/components/logo'
+import Image from 'next/image'
+import applogo from "../public/descify.svg"
 const links = [
     { label: 'Home', href: '/' },
     { label: 'Features', href: '#features' },
@@ -15,11 +16,19 @@ export default function Footer() {
             <div className="mx-auto  px-6">
                 <div className="border-y py-8">
                     <div className="@xl:flex-row @xl:items-center flex flex-col gap-6">
-                        <Link
-                            href="/"
-                            aria-label="home">
-                            <Logo className="h-5 w-fit" />
-                        </Link>
+                                        <Link
+                  href="/"
+                  aria-label="home"
+                  className="flex items-center space-x-2"
+                >
+                  <Image
+                    src={applogo}
+                    alt="Descify Logo"
+                    width={24}
+                    height={24}
+                  />
+                  <span className="font-bold text-lg">Descify</span>
+                </Link>
                         <nav className="@xl:ml-auto flex flex-wrap gap-x-6 gap-y-2">
                             {links.map((link) => (
                                 <Link
