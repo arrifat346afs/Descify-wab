@@ -4,7 +4,7 @@ import { Logo } from '@/components/logo'
 const links = [
     { label: 'Home', href: '/' },
     { label: 'Features', href: '#features' },
-    { label: 'Best for', href: '#best-for' },
+    { label: 'Demo', href: '#demo' },
     { label: 'GitHub', href: 'https://github.com/arrifat346afs/Descify', external: true },
     { label: 'Releases', href: 'https://github.com/arrifat346afs/Descify/releases/latest', external: true },
 ]
