@@ -52,7 +52,7 @@ export default function HeroSection() {
               </p>
 
               <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="">
                   <Link
                     href="/Download"
                     target="_blank"
