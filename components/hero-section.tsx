@@ -21,7 +21,7 @@ export default function HeroSection() {
   // const [menuState, setMenuState] = useState(false)
   return (
     <>
-    <HeaderSection />
+      <HeaderSection />
 
       <main>
         <div
@@ -52,16 +52,12 @@ export default function HeroSection() {
               </p>
 
               <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <Button asChild size="lg" className="hover:cursor-pointer">
-                  <Link
-                    href="/Download"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                <Button size="lg">
+                  <Link href="/Download" target="_blank" rel="noreferrer">
                     <span className="btn-label">Download Now</span>
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg">
+                <Button variant="outline" size="lg">
                   <Link
                     href="https://github.com/arrifat346afs/Descify"
                     target="_blank"
