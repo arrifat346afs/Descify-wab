@@ -33,7 +33,7 @@ export default function HeroSection() {
           <div className="absolute top-0 left-0 h-320 w-60 -translate-y-87.5 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]" />
         </div>
 
-        <section className="overflow-hidden bg-muted/50 dark:bg-background">
+        <section className="relative overflow-hidden bg-muted/50 dark:bg-background">
           <WavyBackground
             backgroundFill="transparent"
             blur={12}
@@ -51,7 +51,7 @@ export default function HeroSection() {
                 Supercharging your images with AI
               </p>
 
-              <div className="relative z-30 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <div className="pointer-events-auto relative z-50 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Button size="lg">
                   <Link href="/Download" target="_blank" rel="noreferrer">
                     <span className="btn-label">Download Now</span>
