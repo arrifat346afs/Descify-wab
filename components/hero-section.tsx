@@ -58,13 +58,13 @@ export default function HeroSection() {
                     <span className="btn-label">Download Now</span>
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" className="gap-2">
                   <Link
                     href="https://github.com/arrifat346afs/Descify"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <Github className="mr-2 size-5" />
+                    <Github className="size-4" />
                     <span className="btn-label">Browse the source</span>
                   </Link>
                 </Button>
