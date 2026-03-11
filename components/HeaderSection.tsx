@@ -1,8 +1,8 @@
-import  { useState } from 'react'
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Github,  Menu, X } from "lucide-react"
-import Link from 'next/link'
-import Image from 'next/image'
+import { Github, Menu, X } from "lucide-react"
+import Link from "next/link"
+import Image from "next/image"
 import applogo from "../public/descify.svg"
 const menuItems = [
   { name: "Home", href: "/" },
@@ -12,11 +12,12 @@ const menuItems = [
   { name: "Download", href: "#download", isAnchor: true },
 ]
 
-
 export const HeaderSection = () => {
-    const [menuState, setMenuState] = useState(false)
+  const [menuState, setMenuState] = useState(false)
   return (
-    <>     <header>
+    <>
+      {" "}
+      <header>
         <nav
           data-state={menuState && "active"}
           className="fixed z-20 w-full border-b border-dashed bg-white backdrop-blur md:relative dark:bg-zinc-950/50 lg:dark:bg-transparent"
@@ -97,11 +98,7 @@ export const HeaderSection = () => {
                     </Link>
                   </Button>
                   <Button asChild size="sm">
-                    <Link
-                      href="https://github.com/arrifat346afs/Descify/releases/latest"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
+                    <Link href="/Download">
                       <span>Download</span>
                     </Link>
                   </Button>
@@ -110,6 +107,7 @@ export const HeaderSection = () => {
             </div>
           </div>
         </nav>
-      </header></>
+      </header>
+    </>
   )
 }
