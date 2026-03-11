@@ -51,7 +51,7 @@ export default function HeroSection() {
                 Supercharging your images with AI
               </p>
 
-              <div className="relative z-20 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <div className="relative z-30 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Button size="lg">
                   <Link href="/Download" target="_blank" rel="noreferrer">
                     <span className="btn-label">Download Now</span>
