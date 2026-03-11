@@ -36,6 +36,7 @@ export const HeaderSection = () => {
                     width={24}
                     height={24}
                   />
+                  <span className="font-bold text-lg">Descify</span>
                 </Link>
 
                 <button
