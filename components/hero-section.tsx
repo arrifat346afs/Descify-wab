@@ -5,6 +5,7 @@ import Link from "next/link"
 // import { useState } from "react"
 import { Button } from "@/components/ui/button"
 // import { Menu, X } from "lucide-react"
+import { Github } from "lucide-react"
 import Image from "next/image"
 import appimg from "../public/screenshot_2025-12-26_16-58-54.png"
 import { WavyBackground } from "./ui/wavy-background"
@@ -63,6 +64,7 @@ export default function HeroSection() {
                     target="_blank"
                     rel="noreferrer"
                   >
+                    <Github className="mr-2 size-5" />
                     <span className="btn-label">Browse the source</span>
                   </Link>
                 </Button>
