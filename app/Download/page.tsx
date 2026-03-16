@@ -42,7 +42,7 @@ const menuItems = [
   { name: "Home", href: "/" },
   { name: "Features", href: "/#features" },
   { name: "FAQs", href: "/#faqs" },
-  { name: "Download", href: "/Download" },
+  // { name: "Download", href: "/Download" },
 ]
 
 function Navbar() {
@@ -144,6 +144,7 @@ function PlatformCard({
   const [isExpanded, setIsExpanded] = useState(false)
 
   const handleDownload = (url: string) => {
+    // eslint-disable-next-line react-hooks/immutability
     window.location.href = url
   }
 
