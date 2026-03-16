@@ -39,7 +39,7 @@ export default function HeroSection() {
             backgroundFill="transparent"
             blur={12}
             waveOpacity={0.2}
-            className="mx-auto max-w-5xl px-6 pt-24 pb-12 lg:pt-16"
+            className="mx-auto max-w-5xl px-6 pt-24 pb-12 lg:pt-16 z"
           >
             <div className="mx-auto max-w-5xl text-center">
               <span className="inline-block rounded-full border px-3 py-1 text-xs font-medium tracking-wide text-muted-foreground uppercase">
