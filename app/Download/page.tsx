@@ -228,8 +228,18 @@ export default function DownloadPage() {
     <div className="flex min-h-screen flex-col">
       <Navbar />
 
-      <section className="flex flex-1 flex-col items-center justify-center px-6 pt-32 pb-20 text-center">
-        <div className="flex flex-col items-center gap-4">
+      <section className="relative flex flex-1 flex-col items-center justify-center px-6 pt-32 pb-20 text-center">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src="/202603170012.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-background/80" />
+        <div className="relative flex flex-col items-center gap-4">
           <div className="flex items-center gap-3">
             <Download className="h-10 w-10 text-foreground" strokeWidth={1.5} />
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">

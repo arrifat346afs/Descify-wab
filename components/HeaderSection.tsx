@@ -34,7 +34,7 @@ export const HeaderSection = () => {
                     src={applogo}
                     alt="Descify Logo"
                     width={24}
-                    height={24}
+                    // height={24}
                   />
                   <span className="font-bold text-lg">Descify</span>
                 </Link>
