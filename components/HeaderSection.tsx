@@ -9,7 +9,7 @@ const menuItems = [
   { name: "Features", href: "#features", isAnchor: true },
   { name: "Demo", href: "#demo", isAnchor: true },
   { name: "FAQs", href: "#faqs", isAnchor: true },
-  // { name: "Download", href: "/Download" },
+  { name: "Download", href: "/Download" },
 ]
 
 export const HeaderSection = () => {
