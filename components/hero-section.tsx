@@ -54,7 +54,7 @@ export default function HeroSection() {
 
               <div className="pointer-events-auto relative z-50 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Button size="lg">
-                  <Link href="/Download" target="_blank" rel="noreferrer">
+                  <Link href="/Download">
                     <span className="btn-label">Download Now</span>
                   </Link>
                 </Button>
