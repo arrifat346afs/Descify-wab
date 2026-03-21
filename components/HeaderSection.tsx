@@ -98,9 +98,14 @@ export const HeaderSection = () => {
                       <Github className="size-5"/>
                     </Link>
                   </Button>
+                  <Button asChild size="sm" va>
+                    <Link href="/auth/signin">
+                      <span>Sign In</span>
+                    </Link>
+                  </Button>
                   <Button asChild size="sm">
-                    <Link href="/Download">
-                      <span>Download</span>
+                    <Link href="/auth/signup">
+                      <span>Sign Up</span>
                     </Link>
                   </Button>
                 </div>
