@@ -46,7 +46,7 @@ export default function HeroSection() {
                 AI metadata workflow for images
               </span>
               <h1 className="mx-auto mt-4 max-w-5xl text-3xl leading-tight font-semibold text-balance md:text-5xl lg:text-5xl xl:text-5xl">
-                Generate image titles, descriptions, and keywords, faster
+                Generate image Titles, Descriptions, and Keywords, Faster with AI
               </h1>
               <p className="mx-auto my-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
                 Supercharging your images with AI
