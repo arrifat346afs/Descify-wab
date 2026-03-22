@@ -82,6 +82,7 @@ export default function HeroSection() {
                   className="rounded-(--radius) border shadow-xl dark:hidden"
                   src={GITHUB_IMAGE_URL}
                   alt="Descify desktop app preview"
+                  placeholder="blur"
                   width={2880}
                   height={2074}
                 />
@@ -89,6 +90,7 @@ export default function HeroSection() {
                   className="hidden rounded-(--radius) border shadow-xl dark:block"
                   src={GITHUB_IMAGE_URL}
                   alt="Descify desktop app preview"
+                  placeholder="blur"
                   width={2880}
                   height={2074}
                 />
