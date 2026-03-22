@@ -1,25 +1,19 @@
 // /* eslint-disable @next/next/no-img-element */
 "use client"
-// import { Logo } from "@/components/logo"
+
 import Link from "next/link"
-// import { useState } from "react"
+
 import { Button } from "@/components/ui/button"
-// import { Menu, X } from "lucide-react"
+
 import { Github } from "lucide-react"
 import Image from "next/image"
 const GITHUB_IMAGE_URL =
   "https://raw.githubusercontent.com/arrifat346afs/Descify/main/img/Screenshot%20from%202026-03-21%2023-12-28.png"
-const BLUR_DATA_URL =
-  "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgUH/8QAIhAAAgIBBAIDAAAAAAAAAAAAAQIDBBEABQYSITFBUWH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAMBAQEAAAAAAAAAAAAAAAABAhEDIf/aAAwDAQACEQMRAD8AyW1trR3N7e2d9aR3MEV1LFJG8YZSjMCpUjocjB/ej9I6J0fR1zXg2Z5JJWlkYyM5LMxJJJJJJJPvRQA1HZsN3b2U1mu1jRkkjZ0Yq6hgAwI+oI6I+dGlbW1tW3bWtJ//2Q=="
+cGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgUH/8QAIhAAAgIBBAIDAAAAAAAAAAAAAQIDBBEABQYSITFBUWH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAMBAQEAAAAAAAAAAAAAAAABAhEDIf/aAAwDAQACEQMRAD8AyW1trR3N7e2d9aR3MEV1LFJG8YZSjMCpUjocjB/ej9I6J0fR1zXg2Z5JJWlkYyM5LMxJJJJJJJPvRQA1HZsN3b2U1mu1jRkkjZ0Yq6hgAwI+oI6I+dGlbW1tW3bWtJ//2Q=="
 import { WavyBackground } from "./ui/wavy-background"
-// import applogo from "../public/descify.svg"
+
 import { HeaderSection } from "./HeaderSection"
 
-// const menuItems = [
-//   { name: "Home", href: "/" },
-//   { name: "Features", href: "#features", isAnchor: true },
-//   { name: "Download", href: "#download", isAnchor: true },
-// ]
 
 export default function HeroSection() {
   // const [menuState, setMenuState] = useState(false)
@@ -84,8 +78,6 @@ export default function HeroSection() {
                   className="rounded-(--radius) border shadow-xl dark:hidden"
                   src={GITHUB_IMAGE_URL}
                   alt="Descify desktop app preview"
-                  placeholder="blur"
-                  blurDataURL={BLUR_DATA_URL}
                   width={2880}
                   height={2074}
                 />
@@ -93,8 +85,7 @@ export default function HeroSection() {
                   className="hidden rounded-(--radius) border shadow-xl dark:block"
                   src={GITHUB_IMAGE_URL}
                   alt="Descify desktop app preview"
-                  placeholder="blur"
-                  blurDataURL={BLUR_DATA_URL}
+
                   width={2880}
                   height={2074}
                 />
