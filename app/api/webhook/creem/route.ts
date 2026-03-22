@@ -1,11 +1,17 @@
-// app/api/webhook/creem/route.ts
-import { Webhook } from '@creem_io/nextjs';
-
+import { db } from "@/db/drizzle";
+import { usersTable } from "@/db/schema";
+import { Webhook } from "@creem_io/nextjs";
 
 export const POST = Webhook({
   webhookSecret: process.env.CREEM_WEBHOOK_SECRET!,
   onCheckoutCompleted: async ({ customer, product }) => {
-    console.log(`${customer?.email} purchased ${product.name}`);
+    if (!customer?.email || !product?.id) {
+      return;
+    }
+
+    await db.insert(usersTable).values({
+      email: customer.email as string,
+      name: customer.name as string,
+    });
   },
-  
 });
