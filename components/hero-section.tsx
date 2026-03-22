@@ -6,16 +6,21 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 import { Github } from "lucide-react"
-import { Image, ImageKitProvider } from '@imagekit/next';
-const IMAGE_URL =
-  "https://ik.imagekit.io/gvt4qxkhg/nextjs%20/Screenshot%20from%202026-03-21%2023-12-28.png"
+import { Image, ImageKitProvider, buildSrc } from '@imagekit/next';
 import { WavyBackground } from "./ui/wavy-background"
 
 import { HeaderSection } from "./HeaderSection"
+import { useState } from "react";
 
 
+const IMAGE_URL =
+  "https://ik.imagekit.io/gvt4qxkhg/nextjs%20/Screenshot%20from%202026-03-21%2023-12-28.png"
+
+
+
+  
 export default function HeroSection() {
-  // const [menuState, setMenuState] = useState(false)
+   const [showPlaceholder, setShowPlaceholder] = useState(true);
   return (
     <>
       <HeaderSection />
@@ -73,14 +78,34 @@ export default function HeroSection() {
           <div className="mx-auto 2xl:max-w-7xl">
             <div className="pl-8 perspective-distant lg:pl-44">
               <div className="-mt-2 rotate-x-20 skew-x-12 mask-r-from-75% mask-b-from-55% mask-b-to-100% pt-2 pl-6 lg:-mt-10 lg:h-160">
-                
+                <ImageKitProvider urlEndpoint={IMAGE_URL}>
                 <Image
                   className="rounded-(--radius) border shadow-xl dark:hidden"
                   src={IMAGE_URL}
                   alt="Descify desktop app preview"
                   width={2880}
                   height={2074}
-                />
+                  loading="eager"
+                    style={showPlaceholder ? {
+                      backgroundImage: `url(${buildSrc({
+                        urlEndpoint: "https://ik.imagekit.io/gvt4qxkhg/nextjs%20/Screenshot%20from%202026-03-21%2023-12-28.png",
+                        src: "/Screenshot from 2026-03-21 23-12-28.png",
+                        transformation: [
+                          // {}, // Any other transformation you want to apply
+                          {
+                            quality: 10,
+                            blur: 90,
+                          }
+                        ]
+                      })})`,
+                      backgroundSize: "cover",
+                      backgroundRepeat: "no-repeat",
+                    } : {}}
+                    onLoad={() => {
+                      setShowPlaceholder(false);
+                    }}
+                  />
+                
                 <Image
                   className="hidden rounded-(--radius) border shadow-xl dark:block"
                   src={IMAGE_URL}
@@ -88,7 +113,27 @@ export default function HeroSection() {
 
                   width={2880}
                   height={2074}
+                  loading="eager"
+                    style={showPlaceholder ? {
+                      backgroundImage: `url(${buildSrc({
+                        urlEndpoint: "https://ik.imagekit.io/gvt4qxkhg/nextjs%20/Screenshot%20from%202026-03-21%2023-12-28.png",
+                        src: "/Screenshot from 2026-03-21 23-12-28.png",
+                        transformation: [
+                          // {}, // Any other transformation you want to apply
+                          {
+                            quality: 10,
+                            blur: 90,
+                          }
+                        ]
+                      })})`,
+                      backgroundSize: "cover",
+                      backgroundRepeat: "no-repeat",
+                    } : {}}
+                    onLoad={() => {
+                      setShowPlaceholder(false);
+                    }}
                 />
+                </ImageKitProvider>
               </div>
             </div>
           </div>
