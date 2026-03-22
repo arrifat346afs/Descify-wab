@@ -88,7 +88,7 @@ export default function HeroSection() {
                   loading="eager"
                     style={showPlaceholder ? {
                       backgroundImage: `url(${buildSrc({
-                        urlEndpoint: "https://ik.imagekit.io/gvt4qxkhg/nextjs%20/Screenshot%20from%202026-03-21%2023-12-28.png",
+                        urlEndpoint: IMAGE_URL,
                         src: "/Screenshot from 2026-03-21 23-12-28.png",
                         transformation: [
                           // {}, // Any other transformation you want to apply
