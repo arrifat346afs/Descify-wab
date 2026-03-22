@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button"
 // import { Menu, X } from "lucide-react"
 import { Github } from "lucide-react"
 import Image from "next/image"
-import appimg from "../public/Screenshot from 2026-03-21 23-12-28.png"
+const GITHUB_IMAGE_URL =
+  "https://raw.githubusercontent.com/arrifat346afs/Descify/main/img/Screenshot%20from%202026-03-21%2023-12-28.png"
 import { WavyBackground } from "./ui/wavy-background"
 // import applogo from "../public/descify.svg"
 import { HeaderSection } from "./HeaderSection"
@@ -39,14 +40,15 @@ export default function HeroSection() {
             backgroundFill="transparent"
             blur={12}
             waveOpacity={0.2}
-            className="mx-auto max-w-5xl px-6 pt-24 pb-12 lg:pt-16 "
+            className="mx-auto max-w-5xl px-6 pt-24 pb-12 lg:pt-16"
           >
             <div className="mx-auto max-w-5xl text-center">
               <span className="inline-block rounded-full border px-3 py-1 text-xs font-medium tracking-wide text-muted-foreground uppercase">
                 AI metadata workflow for images
               </span>
               <h1 className="mx-auto mt-4 max-w-5xl text-3xl leading-tight font-semibold text-balance md:text-5xl lg:text-5xl xl:text-5xl">
-                Generate image Titles, Descriptions, and Keywords, Faster with AI
+                Generate image Titles, Descriptions, and Keywords, Faster with
+                AI
               </h1>
               <p className="mx-auto my-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
                 Supercharging your images with AI
@@ -58,7 +60,7 @@ export default function HeroSection() {
                     <span className="btn-label">Download Now</span>
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="gap-2 flex">
+                <Button variant="outline" size="lg" className="flex gap-2">
                   <Link
                     href="https://github.com/arrifat346afs/Descify"
                     target="_blank"
@@ -78,14 +80,14 @@ export default function HeroSection() {
               <div className="-mt-2 rotate-x-20 skew-x-12 mask-r-from-75% mask-b-from-55% mask-b-to-100% pt-2 pl-6 lg:-mt-10 lg:h-160">
                 <Image
                   className="rounded-(--radius) border shadow-xl dark:hidden"
-                  src={appimg}
+                  src={GITHUB_IMAGE_URL}
                   alt="Descify desktop app preview"
                   width={2880}
                   height={2074}
                 />
                 <Image
                   className="hidden rounded-(--radius) border shadow-xl dark:block"
-                  src={appimg}
+                  src={GITHUB_IMAGE_URL}
                   alt="Descify desktop app preview"
                   width={2880}
                   height={2074}
