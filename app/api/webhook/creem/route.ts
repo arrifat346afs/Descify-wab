@@ -1,4 +1,4 @@
-import { db } from "@/db/drizzle";
+import { db } from "@/db/index";
 import { usersTable } from "@/db/schema";
 import { Webhook } from "@creem_io/nextjs";
 
