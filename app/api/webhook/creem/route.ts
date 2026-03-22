@@ -12,6 +12,7 @@ export const POST = Webhook({
     await db.insert(usersTable).values({
       email: customer.email as string,
       name: customer.name as string,
+      age: 0,
     });
   },
 });
