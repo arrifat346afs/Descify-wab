@@ -7,7 +7,7 @@ import applogo from "../public/descify.svg"
 const menuItems = [
   { name: "Home", href: "/" },
   { name: "Features", href: "#features", isAnchor: true },
-  { name: "Demo", href: "#demo", isAnchor: true },
+  { name: "Donate", href: "/donate"},
   { name: "FAQs", href: "#faqs", isAnchor: true },
   { name: "Download", href: "/Download" },
 ]
