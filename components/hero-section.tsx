@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Github } from "lucide-react"
 import Image from "next/image"
 const GITHUB_IMAGE_URL =
-  "https://raw.githubusercontent.com/arrifat346afs/Descify/main/img/img.webp"
+  "https://raw.githubusercontent.com/arrifat346afs/Descify-wab/blob/main/public/img.webp"
 import { WavyBackground } from "./ui/wavy-background"
 
 import { HeaderSection } from "./HeaderSection"
