@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button"
 
 import { Github } from "lucide-react"
 import Image from "next/image"
-const GITHUB_IMAGE_URL =
-  "https://raw.githubusercontent.com/arrifat346afs/Descify-wab/refs/heads/main/public/img.webp"
+const IMAGE_URL =
+  "https://ik.imagekit.io/gvt4qxkhg/nextjs%20/Screenshot%20from%202026-03-21%2023-12-28.png"
 import { WavyBackground } from "./ui/wavy-background"
 
 import { HeaderSection } from "./HeaderSection"
@@ -75,14 +75,14 @@ export default function HeroSection() {
               <div className="-mt-2 rotate-x-20 skew-x-12 mask-r-from-75% mask-b-from-55% mask-b-to-100% pt-2 pl-6 lg:-mt-10 lg:h-160">
                 <Image
                   className="rounded-(--radius) border shadow-xl dark:hidden"
-                  src={GITHUB_IMAGE_URL}
+                  src={IMAGE_URL}
                   alt="Descify desktop app preview"
                   width={2880}
                   height={2074}
                 />
                 <Image
                   className="hidden rounded-(--radius) border shadow-xl dark:block"
-                  src={GITHUB_IMAGE_URL}
+                  src={IMAGE_URL}
                   alt="Descify desktop app preview"
 
                   width={2880}
