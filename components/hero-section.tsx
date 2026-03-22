@@ -6,7 +6,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 import { Github } from "lucide-react"
-import Image from "next/image"
+import { Image, ImageKitProvider } from '@imagekit/next';
 const IMAGE_URL =
   "https://ik.imagekit.io/gvt4qxkhg/nextjs%20/Screenshot%20from%202026-03-21%2023-12-28.png"
 import { WavyBackground } from "./ui/wavy-background"
@@ -73,6 +73,7 @@ export default function HeroSection() {
           <div className="mx-auto 2xl:max-w-7xl">
             <div className="pl-8 perspective-distant lg:pl-44">
               <div className="-mt-2 rotate-x-20 skew-x-12 mask-r-from-75% mask-b-from-55% mask-b-to-100% pt-2 pl-6 lg:-mt-10 lg:h-160">
+                
                 <Image
                   className="rounded-(--radius) border shadow-xl dark:hidden"
                   src={IMAGE_URL}
