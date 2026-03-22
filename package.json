@@ -12,7 +12,6 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@clerk/nextjs": "^7.0.6",
     "@creem_io/nextjs": "^0.6.0",
     "@imagekit/next": "^2.1.5",
     "@neondatabase/serverless": "^1.0.2",
