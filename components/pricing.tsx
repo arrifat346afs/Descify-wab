@@ -54,20 +54,6 @@ export default function Pricing() {
                   it useful, consider buying us a coffee. Every contribution,
                   big or small, is deeply appreciated.
                 </p>
-                {/* <div className="**:fill-foreground mt-12 flex flex-wrap items-center gap-12">
-                                    <Hulu
-                                        height={18}
-                                        width={56}
-                                    />
-                                    <Spotify
-                                        height={24}
-                                        width={80}
-                                    />
-                                    <FirebaseFull
-                                        height={24}
-                                        width={80}
-                                    />
-                                </div> */}
               </div>
             </div>
           </div>
