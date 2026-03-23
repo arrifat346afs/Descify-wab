@@ -9,11 +9,11 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { CreemCheckout } from "@creem_io/nextjs"
-import { Check, Heart } from "lucide-react"
+import { Check, Heart, Spotlight } from "lucide-react"
 
 const donationTiers = [
-  { amount: 10, productId: "prod_YOUR_10_ID", description: "Coffee" },
-  { amount: 20, productId: "prod_YOUR_20_ID", description: "Snack" },
+  { amount: 10, productId: "prod_1KQXMCEPNzZ5Sfbkl0feGG", description: "Coffee" },
+  { amount: 20, productId: "prod_7Q04Jb3lmSiWcpQyGDiQUs", description: "Snack" },
   { amount: 30, productId: "prod_YOUR_30_ID", description: "Meal" },
   { amount: 40, productId: "prod_YOUR_40_ID", description: "Book" },
   { amount: 50, productId: "prod_YOUR_50_ID", description: "Support" },
@@ -27,6 +27,7 @@ const donationTiers = [
 export default function Pricing() {
   return (
     <div className="relative py-16 md:py-32">
+      <Spotlight />
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold text-balance md:text-4xl lg:text-5xl">
