@@ -99,12 +99,12 @@ export const HeaderSection = () => {
                     </Link>
                   </Button>
                   <Button asChild size="sm" variant={"outline"}>
-                    <Link href="/sign-in">
+                    <Link href="/signin">
                       <span>Sign In</span>
                     </Link>
                   </Button>
                   <Button asChild size="sm">
-                    <Link href="/sign-up">
+                    <Link href="/signup">
                       <span>Sign Up</span>
                     </Link>
                   </Button>
