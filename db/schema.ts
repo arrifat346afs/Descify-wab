@@ -8,7 +8,6 @@ import {
   primaryKey,
   uniqueIndex,
 } from "drizzle-orm/pg-core"
-import type { Adapter } from "better-auth/adapters"
 
 export const users = pgTable("users", {
   id: varchar({ length: 255 }).primaryKey(),
