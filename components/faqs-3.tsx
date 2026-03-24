@@ -6,12 +6,40 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { DynamicIcon, type IconName } from "lucide-react/dynamic"
+import {
+  Info,
+  Cpu,
+  FileKey,
+  Key,
+  Shield,
+  Monitor,
+  Edit,
+  Download,
+} from "lucide-react"
 import Link from "next/link"
+
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  info: Info,
+  cpu: Cpu,
+  "file-key": FileKey,
+  key: Key,
+  shield: Shield,
+  monitor: Monitor,
+  edit: Edit,
+  download: Download,
+}
+
+const DynamicIconWrapper = ({
+  icon: Icon,
+  className,
+}: {
+  icon: React.ComponentType<{ className?: string }>
+  className?: string
+}) => <Icon className={className} />
 
 type FAQItem = {
   id: string
-  icon: IconName
+  icon: string
   question: string
   answer: string
 }
@@ -107,10 +135,12 @@ export default function FAQsThree() {
                   <AccordionTrigger className="cursor-pointer items-center py-5 hover:no-underline">
                     <div className="flex items-center gap-3">
                       <div className="flex size-6">
-                        <DynamicIcon
-                          name={item.icon}
-                          className="m-auto size-4"
-                        />
+                        {iconMap[item.icon] && (
+                          <DynamicIconWrapper
+                            icon={iconMap[item.icon]}
+                            className="m-auto size-4"
+                          />
+                        )}
                       </div>
                       <span className="text-base">{item.question}</span>
                     </div>

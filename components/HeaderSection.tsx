@@ -1,13 +1,14 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Github, Menu, X } from "lucide-react"
+import { Menu, X,} from "lucide-react"
+import { RiGithubFill } from "@remixicon/react"
 import Link from "next/link"
 import Image from "next/image"
 import applogo from "../public/descify.svg"
 const menuItems = [
   { name: "Home", href: "/" },
   { name: "Features", href: "#features", isAnchor: true },
-  { name: "Donate", href: "/donate"},
+  { name: "Donate", href: "/donate" },
   { name: "FAQs", href: "#faqs", isAnchor: true },
   { name: "Download", href: "/Download" },
 ]
@@ -36,7 +37,7 @@ export const HeaderSection = () => {
                     width={24}
                     // height={24}
                   />
-                  <span className="font-bold text-lg">Descify</span>
+                  <span className="text-lg font-bold">Descify</span>
                 </Link>
 
                 <button
@@ -95,7 +96,7 @@ export const HeaderSection = () => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <Github className="size-5"/>
+                      <RiGithubFill />
                     </Link>
                   </Button>
                   <Button asChild size="sm" variant={"outline"}>

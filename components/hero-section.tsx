@@ -5,7 +5,7 @@ import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
 
-import { Github } from "lucide-react"
+import { RiGithubFill } from "@remixicon/react"
 import { Image, ImageKitProvider, buildSrc } from '@imagekit/next';
 import { WavyBackground } from "./ui/wavy-background"
 
@@ -67,7 +67,7 @@ export default function HeroSection() {
                     rel="noreferrer"
                     className="flex items-center gap-2"
                   >
-                    <Github className="size-4" />
+                    <RiGithubFill />
                     <span className="btn-label">Browse the source</span>
                   </Link>
                 </Button>
