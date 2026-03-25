@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Menu, X,} from "lucide-react"
 import { RiGithubFill } from "@remixicon/react"
 import Link from "next/link"
-import { Image } from '@imagekit/next';
+import { Image, ImageKitProvider } from '@imagekit/next';
 
 const menuItems = [
   { name: "Home", href: "/" },
@@ -13,6 +13,9 @@ const menuItems = [
   { name: "Download", href: "/Download" },
 ]
 
+
+const IMAGE_URL =
+  "https://ik.imagekit.io/gvt4qxkhg/nextjs%20/descify.svg?updatedAt=1774164814644"
 export const HeaderSection = () => {
   const [menuState, setMenuState] = useState(false)
   return (
@@ -31,12 +34,14 @@ export const HeaderSection = () => {
                   aria-label="home"
                   className="flex items-center space-x-2"
                 >
+                  <ImageKitProvider urlEndpoint={IMAGE_URL}>
                   <Image
-                    src={"https://ik.imagekit.io/gvt4qxkhg/nextjs%20/descify.svg?updatedAt=1774164814644"}
+                    src={IMAGE_URL}
                     alt="Descify Logo"
                     width={24}
-                    // height={24}
+                    height={24}
                   />
+                  </ImageKitProvider>
                   <span className="text-lg font-bold">Descify</span>
                 </Link>
 
