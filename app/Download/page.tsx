@@ -237,7 +237,7 @@ export default function DownloadPage() {
           playsInline
           className="absolute inset-0 h-full w-full object-cover"
         >
-          <source src="/202603170012.mp4" type="video/mp4" />
+          <source src="https://ik.imagekit.io/gvt4qxkhg/nextjs%20/202603170012.mp4?updatedAt=1774164816355" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-background/80" />
         <div className="relative flex flex-col items-center gap-4">
