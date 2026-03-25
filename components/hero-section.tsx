@@ -80,7 +80,7 @@ export default function HeroSection() {
               <div className="-mt-2 rotate-x-20 skew-x-12 mask-r-from-75% mask-b-from-55% mask-b-to-100% pt-2 pl-6 lg:-mt-10 lg:h-160">
                 <ImageKitProvider urlEndpoint={IMAGE_URL}>
                 <Image
-                  className="rounded-(--radius) border shadow-xl dark:hidden"
+                  className="rounded-lg border shadow-xl dark:hidden"
                   src={IMAGE_URL}
                   alt="Descify desktop app preview"
                   width={2880}
@@ -107,7 +107,7 @@ export default function HeroSection() {
                   />
                 
                 <Image
-                  className="hidden rounded-(--radius) border shadow-xl dark:block"
+                  className="hidden rounded-lg border shadow-xl dark:block"
                   src={IMAGE_URL}
                   alt="Descify desktop app preview"
 
