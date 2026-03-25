@@ -101,7 +101,7 @@ export const HeaderSection = () => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <RiGithubFill />
+                      <RiGithubFill  />
                     </Link>
                   </Button>
                   <Button asChild size="sm" variant={"outline"}>
