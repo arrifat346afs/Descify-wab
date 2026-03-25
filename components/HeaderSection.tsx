@@ -95,7 +95,7 @@ export const HeaderSection = () => {
                 </div>
 
                 <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:border-l lg:pl-6">
-                  <Button asChild variant="outline" className="text-4xl">
+                  <Button asChild variant="outline" size="lg" className="text-4xl">
                     <Link
                       href="https://github.com/arrifat346afs/Descify"
                       target="_blank"
@@ -104,12 +104,12 @@ export const HeaderSection = () => {
                       <RiGithubFill/>
                     </Link>
                   </Button>
-                  <Button asChild size="slg" variant={"outline"}>
+                  <Button asChild size="lg" variant={"outline"}>
                     <Link href="/signin">
                       <span>Sign In</span>
                     </Link>
                   </Button>
-                  <Button asChild size="sm">
+                  <Button asChild size="lg">
                     <Link href="/signup">
                       <span>Sign Up</span>
                     </Link>
