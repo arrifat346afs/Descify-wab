@@ -95,7 +95,7 @@ export const HeaderSection = () => {
                 </div>
 
                 <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:border-l lg:pl-6">
-                  <Button asChild variant="outline" size="sm" className="textsiz">
+                  <Button asChild variant="outline" size="sm" className="text-4xl">
                     <Link
                       href="https://github.com/arrifat346afs/Descify"
                       target="_blank"
