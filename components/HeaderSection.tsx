@@ -4,7 +4,7 @@ import { Menu, X,} from "lucide-react"
 import { RiGithubFill } from "@remixicon/react"
 import Link from "next/link"
 import Image from "next/image"
-import applogo from "../public/descify.svg"
+
 const menuItems = [
   { name: "Home", href: "/" },
   { name: "Features", href: "#features", isAnchor: true },
@@ -32,7 +32,7 @@ export const HeaderSection = () => {
                   className="flex items-center space-x-2"
                 >
                   <Image
-                    src={applogo}
+                    src={"https://ik.imagekit.io/gvt4qxkhg/nextjs%20/descify.svg?updatedAt=1774164814644"}
                     alt="Descify Logo"
                     width={24}
                     // height={24}
