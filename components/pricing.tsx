@@ -23,14 +23,14 @@ const donationTiers = [
     productId: "prod_7Q04Jb3lmSiWcpQyGDiQUs",
     description: "Snack",
   },
-  { amount: 30, productId: "prod_YOUR_30_ID", description: "Meal" },
-  { amount: 40, productId: "prod_YOUR_40_ID", description: "Book" },
-  { amount: 50, productId: "prod_YOUR_50_ID", description: "Support" },
+  { amount: 30, productId: "prod_2sqzTJNGpIrdSYpJVhdk7t", description: "Meal" },
+  { amount: 40, productId: "prod_1mYQFYam97lCMsuYMa1Qnh", description: "Book" },
+  { amount: 50, productId: "prod_iIumg9Th1NUM3NBkKywo0", description: "Support" },
   // { amount: 60, productId: "prod_YOUR_60_ID", description: "Gift" },
   // { amount: 70, productId: "prod_YOUR_70_ID", description: "Bonus" },
   // { amount: 80, productId: "prod_YOUR_80_ID", description: "Premium" },
   // { amount: 90, productId: "prod_YOUR_90_ID", description: "Elite" },
-  { amount: 100, productId: "prod_YOUR_100_ID", description: "Champion" },
+  { amount: 100, productId: "prod_wQewukwK864gxj5W64wX4", description: "Champion" },
 ]
 
 export default function Pricing() {
