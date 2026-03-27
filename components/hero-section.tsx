@@ -14,8 +14,8 @@ import { useState } from "react";
 
 
 const IMAGE_URL =
-  "https://ik.imagekit.io/gvt4qxkhg/nextjs%20/app.png"
-const Src = "/app.png"
+  "https://ik.imagekit.io/gvt4qxkhg/nextjs%20/Screenshot%20from%202026-03-27%2022-27-33.png"
+const Src = "/Screenshot from 2026-03-27 22-27-33.png"
 
 
   
