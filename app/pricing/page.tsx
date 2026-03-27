@@ -1,9 +1,9 @@
-// import Pricing from "@/components/pricing"
 import Pricing from "@/components/pricing"
-export const page = () => {
+
+export default function PricingPage() {
   return (
     <div>
-        <Pricing />
+      <Pricing />
     </div>
   )
 }
