@@ -26,10 +26,10 @@ const donationTiers = [
   { amount: 30, productId: "prod_YOUR_30_ID", description: "Meal" },
   { amount: 40, productId: "prod_YOUR_40_ID", description: "Book" },
   { amount: 50, productId: "prod_YOUR_50_ID", description: "Support" },
-  { amount: 60, productId: "prod_YOUR_60_ID", description: "Gift" },
-  { amount: 70, productId: "prod_YOUR_70_ID", description: "Bonus" },
-  { amount: 80, productId: "prod_YOUR_80_ID", description: "Premium" },
-  { amount: 90, productId: "prod_YOUR_90_ID", description: "Elite" },
+  // { amount: 60, productId: "prod_YOUR_60_ID", description: "Gift" },
+  // { amount: 70, productId: "prod_YOUR_70_ID", description: "Bonus" },
+  // { amount: 80, productId: "prod_YOUR_80_ID", description: "Premium" },
+  // { amount: 90, productId: "prod_YOUR_90_ID", description: "Elite" },
   { amount: 100, productId: "prod_YOUR_100_ID", description: "Champion" },
 ]
 
