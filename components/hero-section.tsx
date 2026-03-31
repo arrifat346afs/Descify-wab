@@ -12,6 +12,7 @@ import { WavyBackground } from "./ui/wavy-background"
 import { HeaderSection } from "./HeaderSection"
 import { useState } from "react"
 import { Cover } from "./ui/cover"
+import { motion } from "motion/react"
 
 const IMAGE_URL =
   "https://ik.imagekit.io/gvt4qxkhg/nextjs%20/Screenshot%20from%202026-03-31%2012-16-45.png"
@@ -53,11 +54,17 @@ export default function HeroSection() {
               </p>
 
               <div className="pointer-events-auto relative z-50 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <Button size="lg">
-                  <Link href="/Download">
-                    <span className="btn-label">Download Now</span>
-                  </Link>
-                </Button>
+                <motion.div
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.9, y: 1 }}
+                  transition={{ type: "spring" }}
+                >
+                  <Button size="lg">
+                    <Link href="/Download">
+                      <span className="btn-label">Download Now</span>
+                    </Link>
+                  </Button>
+                </motion.div>
                 <Button variant="outline" size="lg" className="flex gap-2">
                   <Link
                     href="https://github.com/arrifat346afs/Descify"
