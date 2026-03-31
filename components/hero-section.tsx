@@ -42,18 +42,37 @@ export default function HeroSection() {
             className="mx-auto max-w-5xl px-6 pt-24 pb-12 lg:pt-16"
           >
             <div className="mx-auto max-w-5xl text-center">
-              <span className="inline-block rounded-full border px-3 py-1 text-xs font-medium tracking-wide text-muted-foreground uppercase">
+              <motion.span
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="inline-block rounded-full border px-3 py-1 text-xs font-medium tracking-wide text-muted-foreground uppercase"
+              >
                 AI metadata workflow for images
-              </span>
-              <h1 className="mx-auto mt-4 max-w-5xl text-3xl leading-tight font-semibold text-balance md:text-5xl lg:text-5xl xl:text-5xl">
+              </motion.span>
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="mx-auto mt-4 max-w-5xl text-3xl leading-tight font-semibold text-balance md:text-5xl lg:text-5xl xl:text-5xl"
+              >
                 Generate image Titles, Descriptions, and Keywords,{" "}
                 <Cover>Faster with AI</Cover>
-              </h1>
-              <p className="mx-auto my-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="mx-auto my-6 max-w-3xl text-lg text-muted-foreground md:text-xl"
+              >
                 Supercharging your images with AI
-              </p>
+              </motion.p>
 
-              <div className="pointer-events-auto relative z-50 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <motion.div initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="pointer-events-auto relative z-50 flex flex-col items-center justify-center gap-3 sm:flex-row"
+              >
                 <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.9, y: 1 }}
@@ -65,22 +84,32 @@ export default function HeroSection() {
                     </Link>
                   </Button>
                 </motion.div>
-                <Button variant="outline" size="lg" className="flex gap-2">
-                  <Link
-                    href="https://github.com/arrifat346afs/Descify"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    <RiGithubFill />
-                    <span className="btn-label">Browse the source</span>
-                  </Link>
-                </Button>
-              </div>
+                <motion.div
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.9, y: 1 }}
+                  transition={{ type: "spring" }}
+                >
+                  <Button variant="outline" size="lg" className="flex gap-2">
+                    <Link
+                      href="https://github.com/arrifat346afs/Descify"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      <RiGithubFill />
+                      <span className="btn-label">Browse the source</span>
+                    </Link>
+                  </Button>
+                </motion.div>
+              </motion.div>
             </div>
           </WavyBackground>
 
-          <div className="mx-auto 2xl:max-w-7xl">
+          <motion.div initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="mx-auto 2xl:max-w-7xl"
+          >
             <div className="pl-8 perspective-distant lg:pl-44">
               <div className="-mt-2 rotate-x-20 skew-x-12 mask-r-from-75% mask-b-from-55% mask-b-to-100% pt-2 pl-6 lg:-mt-10 lg:h-160">
                 <ImageKitProvider urlEndpoint={IMAGE_URL}>
@@ -148,7 +177,7 @@ export default function HeroSection() {
                 </ImageKitProvider>
               </div>
             </div>
-          </div>
+          </motion.div>
         </section>
       </main>
     </>

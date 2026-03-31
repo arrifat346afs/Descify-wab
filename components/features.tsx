@@ -1,3 +1,5 @@
+"use client"
+
 import { cn } from "@/lib/utils"
 import {
   IconAdjustmentsBolt,
@@ -15,6 +17,7 @@ import {
   IconListNumbers,
   IconClockHour4,
 } from "@tabler/icons-react"
+import { motion } from "motion/react"
 
 export default function Features() {
   const features = [
@@ -112,11 +115,15 @@ const Feature = ({
   index: number
 }) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.2, delay: index * 0.1, ease: "easeOut" }}
       className={cn(
-        "group/feature relative flex flex-col py-10 lg:border-r border-border",
-        (index === 0 || index === 4 || index === 8) && "lg:border-l border-border",
-        index < 8 && "lg:border-b border-border"
+        "group/feature relative flex flex-col border-border py-10 lg:border-r",
+        (index === 0 || index === 4 || index === 8) &&
+          "border-border lg:border-l",
+        index < 8 && "border-border lg:border-b"
       )}
     >
       {index < 4 && (
@@ -128,6 +135,7 @@ const Feature = ({
       <div className="relative z-10 mb-4 px-10 text-muted-foreground">
         {icon}
       </div>
+
       <div className="relative z-10 mb-2 px-10 text-lg font-bold">
         <div className="absolute inset-y-0 left-0 h-6 w-1 origin-center rounded-tr-full rounded-br-full bg-border transition-all duration-200 group-hover/feature:h-8 group-hover/feature:bg-primary" />
         <span className="inline-block text-foreground transition duration-200 group-hover/feature:translate-x-2">
@@ -137,6 +145,6 @@ const Feature = ({
       <p className="relative z-10 max-w-xs px-10 text-sm text-muted-foreground">
         {description}
       </p>
-    </div>
+    </motion.div>
   )
 }

@@ -16,6 +16,7 @@ import {
   Edit,
   Download,
 } from "lucide-react"
+import { motion } from "motion/react"
 import Link from "next/link"
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -43,7 +44,7 @@ type FAQItem = {
   question: string
   answer: string
 }
-
+// motion
 export default function FAQsThree() {
   const faqItems: FAQItem[] = [
     {
@@ -105,7 +106,12 @@ export default function FAQsThree() {
   ]
 
   return (
-    <section className="bg-muted py-20 dark:bg-background">
+    <motion.section 
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="bg-muted py-20 dark:bg-background"
+    >
       <div className="mx-auto max-w-5xl px-4 md:px-6">
         <div className="flex flex-col gap-10 md:flex-row md:gap-16">
           <div className="md:w-1/3">
@@ -156,6 +162,6 @@ export default function FAQsThree() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
